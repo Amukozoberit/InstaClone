@@ -18,7 +18,8 @@ urlpatterns=[
     url('oneuser/(\d+)', views.oneuser, name='oneuser'),
     url('updatecap/(\d+)', views.update_caption, name='updatecap'),
     url('updatecaption/(\d+)', views.edit_caption, name='updatecaption'),
-    url(r'^deleteimage/(\d+)',views.delete_img,name='deleteimg')]
+    url(r'^deleteimage/(\d+)',views.delete_img,name='deleteimg'),
+]
 
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
